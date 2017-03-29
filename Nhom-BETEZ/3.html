@@ -1,197 +1,161 @@
-<!DOCTYPE htmlxmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+
 <head>
-<!--title move using JavaScript-->
-<script language="JavaScript"> 
-    var txt=" Thanh Toan     "; 
-    var espera=200; 
-    var refresco=null; 
-    function rotulo_title() { 
-        document.title=txt; 
-        txt=txt.substring(1,txt.length)+txt.charAt(0); 
-        refresco=setTimeout("rotulo_title()",espera); 
-    } 
-    rotulo_title(); 
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Đăng nhập </title>
 
-<meta name="easyQ" content="text/html"; charset="utf-8">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-<link href="https://fonts.googleapis.com/css?family=Anton|Audiowide|Baloo|Chewy|Cookie|Fjalla+One|Gloria+Hallelujah|Kaushan+Script|Lobster|PT+Sans+Narrow|Pacifico|Righteous"
-rel="stylesheet">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="easyq.css">
-<style>
-    #container{
-        margin-left: 10px;
-        background-color: #F1F1F1;
-    }
-    .container{
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-    .navbar-brand{
-        margin:0px;
-        
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-        border:10px;
-    }
-    .content1{
-        margin-right: 10px;
-    }
-    .content1{
-        margin-left : 0px;
-    }
-    #nameProduct{
-        top: 0px;
-        color:green;
-    }
-    #tongTien{
-        background-color: #F2F2F2;
-        color: red;
-    }
-    #cap{
-        color: green;
-        font-size: 20px;
-    }
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="Login.css">     
+</head>
+
+<body>
+    <style>
     .name{
         color: #0de10d;
         font-family: Helvetica, Arial, Tahoma, sans-serif;
         font-weight: 200;
+        padding: 15px;
     }
-    .
 </style>
-</head>
-<body>
-<div id="container">
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">BETEZ Café</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#">Khuyến mãi</a></li>
-                <li><a href="#">Địa điểm</a></li>
-                <li><a href="#">Giới thiệu</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng xuất</a></li>
-            </ul>
-        </div>
-    </nav>
-</div>
-
-
-<div id="main">
-    <div class="row">
-        <div class="col-md-10">
-            <a class="navbar-brand" href="http://betez.ml/"><img src="http://i.imgur.com/j8hndhf.png" width="100px" height="100px"></a>
-        </div>
-        <div class="col-md-2 user">
-            <p>Xin chào <span class="name"><a href="#"> P T Quang</a></span></p>
-        </div>
-    </div>
-    <div class="content1">
+<div class="container-fluid">
         <div class="row">
-            <div class="col-md-1">
-                 
-            </div>
-            <div class="col-md-9">
-                <nav class="navbar navbar-collapse bg-faded">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Các sản phẩm hot
-                            <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">xxx</a></li>
-                                <li><a href="#">yyy</a></li>
-                                <li><a href="#">zzz</a></li>
+            <div class="col-md-12">
+                <div class="row">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="http://localhost:8080/betez">BETEZ Café</a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li><a href="http://localhost:8080/betez">Home</a></li>
+                                <li><a href="#menu">Menu</a></li>
+                                <li><a href="#">Khuyến mãi</a></li>
+                                <li><a href="#">Địa điểm</a></li>
+                                <li><a href="#">Giới thiệu</a></li>
                             </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Các sản phẩm đang khuyến mãi
-                                <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                              <li><a href="#">xxx</a></li>
-                              <li><a href="#">yyy</a></li>
-                              <li><a href="#">zzz</a></li>
+                                                        <ul class="nav navbar-nav navbar-right">
+                                <li><a href="http://localhost:8080/betez/register"><span class="glyphicon glyphicon-user"></span> Đăng kí</a></li>
+                                <li><a href="http://localhost:8080/betez/login"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
                             </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Phương thức thanh toán
-                            <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">xxx</a></li>
-                                <li><a href="#">yyy</a></li>
-                                <li><a href="#">zzz</a></li>
-                            </ul>
-                        </li>
-                        <li><form class="form-inline navbar-form pull-left">
-                            <input class="form-control" type="text" placeholder="Tim Kiếm Sản Phẩm">
-                            <button class="btn btn-success-outline" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                            </form>
-                        </li>
-                    </ul>
-
-                </nav>
-            </div>
-
-            </div>
-        </div>
-        <div class="container">
-            <table class="table" >
-                <caption id="cap"><B>Các sản phẩm đã đặt hàng: </B></caption>
-                <thead>
-                    <tr>
-                        <th>STT</th>
-                        <th>Sản Phẩm</th>
-                        <th>Số lượng</th>
-                        <th>Giá trị</th>
-                        <th>Hủy</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><div id="nameProduct"><img src="http://i.imgur.com/8LvlRzX.jpg" width="60px" height="60px" title="Cà phê Capuchino" ismap></div></td>
-                        <td>1</td>
-                        <td>50.000vnđ</td>
-                        <td><button type="button" class="btn btn-link"><span class="glyphicon glyphicon-remove-sign"></span></button></td>
-                    </tr>
-                </tbody>
-                <tfoot id="tongTien">
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th>Tổng tiền: 50.000vnđ</th>
-                    <th></th>
-                </tfoot>
-            </table></div>
-            <div class="row">
-                <div class="col-md-8"></div>
-                <div class="col-md-4">
-                    <a href="#"><button type="button" class="btn btn-primary btn-md">Mua tiếp</button></a>
-                    <a href="#"><button type="button" class="btn btn-success ">Thanh toán</button></a>
+                                        
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
-
-
-        <!--footer-->
-            <br>
-            <div class="footer">
-                <div class="row">                  
-                    </div>
-                    <div class="col-md-9">
-                        <p  style="float: left">&reg;Powered by <span class="name">BETEZ Team</span></p>
-                        <a  href="#"  style="float: right"><p><span class="glyphicon glyphicon-phone-alt"></span> Liên hệ</p></a>
-                    </div>
+</div>    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <!--<div class="row">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">BETEZ Café</a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#menu">Menu</a></li>
+                                <li><a href="#">Khuyến mãi</a></li>
+                                <li><a href="#">Địa điểm</a></li>
+                                <li><a href="#">Giới thiệu</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Đăng kí</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>-->
+                <div class="row">
                     <div class="col-md-2">
-                    </div>             
+                    </div>
+                    <div class="col-md-5">
+                        <h3 class="text-center">
+                            Đăng nhập
+                        </h3>
+                        <form class="form-horizontal" role="form" method="POST" action="action.php">
+                            <div class="form-group">
+
+                                <label for="inputEmail3" class="col-sm-2 control-label">
+								Email
+							</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail3" name="username" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label for="inputPassword3" class="col-sm-2 control-label">
+								Mật khẩu
+							</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="inputPassword3" name="password" />
+                                </div>
+                            </div>
+
+                            <p class="notification">
+                                                        </p>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+
+                                        <label>
+										<input type="checkbox" /> Ghi nhớ tài khoản và mật khẩu
+									</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+
+                                    <button type="submit" class="btn btn-default" id="button" name='button-submit'>
+									Đăng nhập 
+								</button>
+                                </div>
+                            </div>
+                        </form> 
+                        
+                        <!-- link đến file quên mật khẩu -->
+                        <a href="ForgotPassword.php" class="btn btn-link btn-block" type="button">Quên mật khẩu?</a> 
+                        
+                        <!-- link đến file đăng kí tài khoản -->
+                        <a href="../register" class="btn btn-link btn-block" type="button">Chưa có tài khoản? Click vào đây để tạo tài khoản miễn phí!!!!!</a>
+                    
+                    </div>
+                    <div class="col-md-5">
+                        <div class="icon-facebook">
+                            <a href="https://www.facebook.com/dialog/oauth?client_id=536643483177466&redirect_uri=http://localhost:8080/betez/login/fblogin.php&scope=public_profile" target="blank">
+                                <img alt="Login with Facebook" src="http://i.imgur.com/959OX3J.png" />
+                            </a>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="icon-google">
+
+                            <!-- link đến file đăng kí bằng google -->
+                            <a href="http://localhost:8080/betez/login/gglogin.php" target="blank">
+                                <img alt="Sign in with Google" src="http://i.imgur.com/ujkvOCz.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--end footer-->
-        <script src="http:///code.jquery.com/jquery.js"></script>
-        <script src="http:///netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    </body>
-    </html>
+        </div>
+    </div>
+</body>
+
+</html>

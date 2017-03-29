@@ -8,248 +8,338 @@
     <title>BETEZ Café</title>
     <!--icon-->
     <link rel="icon" href="images/logo.png">
-    
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
     <!--link to fonts-->
     <link href="https://fonts.googleapis.com/css?family=Anton|Audiowide|Baloo|Chewy|Cookie|Fjalla+One|Gloria+Hallelujah|Kaushan+Script|Lobster|PT+Sans+Narrow|Pacifico|Righteous"
         rel="stylesheet">
-    <style>
-        * {
-            /*border: 1px gray solid;*/
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="container-fluid" style="background-color: black">
+            <style>
+    .name{
+        color: #0de10d;
+        font-family: Helvetica, Arial, Tahoma, sans-serif;
+        font-weight: 200;
+        padding: 15px;
+    }
+</style>
+<div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <!--nav-->
                     <nav class="navbar navbar-inverse">
                         <div class="container-fluid">
                             <div class="navbar-header">
-                                <a class="navbar-brand" href="#">BETEZ Café</a>
+                                <a class="navbar-brand" href="http://localhost:8080/betez">BETEZ Café</a>
                             </div>
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="http://localhost:8080/betez">Home</a></li>
                                 <li><a href="#menu">Menu</a></li>
                                 <li><a href="#">Khuyến mãi</a></li>
                                 <li><a href="#">Địa điểm</a></li>
                                 <li><a href="#">Giới thiệu</a></li>
                             </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                                        <ul class="nav navbar-nav navbar-right">
+                                <li><a href="http://localhost:8080/betez/register"><span class="glyphicon glyphicon-user"></span> Đăng kí</a></li>
+                                <li><a href="http://localhost:8080/betez/login"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
                             </ul>
+                                        
                         </div>
                     </nav>
-                    <!--end nav-->
                 </div>
-                <div class="row">
-                    <img class="img-responsive" src="images/slogan.jpg" alt="">
+            </div>
+        </div>
+</div>            <div id="slogan">
+                <img src="images/slogan_background.jpg" alt="">
+                <div id="words">
+                    <p style="font-size: 115pt;">
+                        It's not just coffee
+                    </p>
+                    <p style="font-size: 140pt;">
+                        It's Café
+                    </p>
                 </div>
-                <div class="row">
-                    <div class="col-md-12" style="background-image: url(images/pattern.jpg);background-size: 100% auto; background-repeat: repeat-y">
-                        <div class="row" back>
-                            <div class="col-md-2">
+            </div>
+            <div id="menu">
+                <div class="menu-header container">
+                    <img src="images/menu-header.png" alt="">
+                    <p>Menu</p>
+                    <img src="images/menu-header.png" alt="">
+                </div>
+                <div class="menu-content container clearfix">
+                    <!--products-->
+                                            <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/black-coffee.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(1)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
                             </div>
-                            <div class="col-md-8">
-                                <!--menu header-->
-                                <img class="img-responsive" style="margin: 20px auto;" src="images/menu-header.png" alt="" id="menu">
-                                <!--Menu Start-->
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <!--Ảnh chỉ phụ thuộc vào tỷ lệ-->
-                                            <img alt="Bootstrap Thumbnail First" src="images/products/black-coffee.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Cà phê đen
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail Second" src="images/products/cafe-mocha.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Cà phê Mocha
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail Third" src="images/products/milked-coffee.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Cà phê sữa
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail First" src="images/products/capuchino.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Cappuccino
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail Second" src="images/products/hazelnut-coffee.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Cà phê hạt dẻ
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail Third" src="images/products/tra-o-long.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Trà Ô Long
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail First" src="images/products/tra-xanh-mat-ong.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Trà xanh mật ong
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail Second" src="images/products/hong-tra.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Hồng trà
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail Third" src="images/products/tra-xanh-sua.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Trà xanh sữa
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail First" src="images/products/matcha.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Matcha
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail Second" src="images/products/sua-chua-nep-cam.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Sữa chua nếp cẩm
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="Bootstrap Thumbnail Third" src="images/products/sua-chua-mit.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Sữa chua mít
-                                                </h3>
-                                                <p>
-                                                    <a class="btn btn-primary" href="#">Đặt hàng</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Menu END-->
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
                             </div>
-                            <div class="col-md-2">
+                            <p class="product-name">
+                                Cà phê đen                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/Hazelnut-Coffee.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(2)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
                             </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Cà phê hạt dẻ                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/milked-coffee.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(3)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
+                            </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Cà phê sữa                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/capuchino.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(4)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
+                            </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Cappuccino                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/cafe-mocha.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(5)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
+                            </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Cà phê Mocha                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/tra-o-long.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(6)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
+                            </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Trà Ô Long                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/hong-tra.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(7)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
+                            </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Hồng trà                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/tra-xanh-mat-ong.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(8)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
+                            </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Trà xanh mật ong                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/tra-xanh-sua.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(9)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
+                            </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Trà sữa                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/matcha.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(10)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
+                            </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Matcha                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/sua-chua-mit.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(11)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
+                            </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Sữa chua mít                            </p>
+                        </div>
+                                                <div class="product">
+                            <div class="product-thumbnail" style="background-image: url('images/products/sua-chua-nep-cam.jpg')">
+                                <button class="thumbnail-overlay" onclick="add_cart(12)">
+                                <p>
+                                    Đặt hàng
+                                </p>
+                            </button>
+                            </div>
+                            <div class="product-price">
+                                <p>
+                                    30k</p>
+                            </div>
+                            <p class="product-name">
+                                Sữa chua nếp cẩm                            </p>
+                        </div>
+                                                    <!--end products-->
+                </div>
+                <!--xem session-->
+                <p id='test'>
+
+                </p>
+            </div>
+            <!--end menu-->
+            <div class="footer">
+    <div class="container">
+        <p>
+            ®Powered by <span>BETEZ Team</span>
+        </p>
+    </div>
+</div>                <!--cart-->
+                <div class="cart-container">
+                    <div class="cart">
+                        <div class="cart-products">
+                                                            <!--đoạn script làm màu :p-->
+                                <script>$(document).ready(function () {
+                                    $('.cart').fadeIn();
+                                    $('.cart-product').show();
+                                    $('.container').animate({left: '-=75px'}, 200);
+                                });</script>
+                                <div class="cart-product">
+        <div class="cart-product-thumbnail" style="background-image: url('images/products/Hazelnut-Coffee.jpg');"></div>
+        <p class='cart-product-name'>
+            Cà phê hạt dẻ        </p>
+    </div>
+        <div class="cart-product">
+        <div class="cart-product-thumbnail" style="background-image: url('images/products/milked-coffee.jpg');"></div>
+        <p class='cart-product-name'>
+            Cà phê sữa        </p>
+    </div>
+        <div class="cart-product">
+        <div class="cart-product-thumbnail" style="background-image: url('images/products/tra-o-long.jpg');"></div>
+        <p class='cart-product-name'>
+            Trà Ô Long        </p>
+    </div>
+                            </div>
+                        <!--end ordered products-->
+                        <div class="cart-button">
+                            <a href="checkout" class=""><span>Thanh toán</span>🛒</a>
                         </div>
                     </div>
                 </div>
-                <!--footer-->
-                <div class="row">
-                    <div class="col-md-2">
-                    </div>
-                    <div class="col-md-8">
-                        <p  style="float: left">Powered by BETEZ Team</p>
-                        <a  href="#"  style="float: right"><p><span class="glyphicon glyphicon-phone-alt"></span> Liên hệ</p></a>
-                    </div>
-                    <div class="col-md-2">
-                    </div>
-                </div>
-                <!--end footer-->
-            </div>
-        </div>
-    </div>
+                <!--endcart-->
+
+<!--====================This is THE END=================-->
+
+
+                <script>
+                    //Add to cart function, using AJAX 
+                    function add_cart(index) {
+                        $.ajax({
+                            //gửi request
+                            url: "app/addcart.php?productindex=" + index,
+                            type: "get",
+                            // Lấy data về
+                            success: function (data) {
+                                data.trim();
+                                $('.cart').fadeIn();
+                                if (data == 'error') {
+                                    alert('Có lỗi xảy ra trong quá trình đặt hàng. Vui lòng thử lại!!!');
+                                }
+                                else if (data == 'duplicate') {
+                                    alert('Bạn vừa đặt sản phẩm đó thêm lần nữa. Bạn cũng có thể chỉnh số lượng sản phẩm trong trang thanh toán.')
+                                }
+                                else {
+                                    var newElem = $(data);
+                                    $('.cart-products').append(newElem);
+                                    newElem.ready(function () {
+                                        newElem.fadeIn();
+                                    });
+                                }
+                            }
+                        });
+                    }
+                </script>
+                <script href="script/script.js"></script>
+
 </body>
 
 </html>

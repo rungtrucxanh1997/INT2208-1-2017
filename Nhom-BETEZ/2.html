@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Đăng kí </title>
+    <!--icon-->
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="../css/bootstrapinconflict.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -25,7 +27,8 @@
             position: relative;
             right: 20px;
         }
-        
+
+
         #button {
             margin: 10px;
             color: #FFF;
@@ -36,10 +39,44 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <style>
+    .name{
+        color: #0de10d;
+        font-family: Helvetica, Arial, Tahoma, sans-serif;
+        font-weight: 200;
+        padding: 15px;
+    }
+</style>
+<div class="container-fluid">
         <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="http://localhost:8080/betez">BETEZ Café</a>
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li><a href="http://localhost:8080/betez">Home</a></li>
+                                <li><a href="#menu">Menu</a></li>
+                                <li><a href="#">Khuyến mãi</a></li>
+                                <li><a href="#">Địa điểm</a></li>
+                                <li><a href="#">Giới thiệu</a></li>
+                            </ul>
+                                                        <ul class="nav navbar-nav navbar-right">
+                                <li><a href="http://localhost:8080/betez/register"><span class="glyphicon glyphicon-user"></span> Đăng kí</a></li>
+                                <li><a href="http://localhost:8080/betez/login"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+                            </ul>
+                                        
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+</div>    <!--<div class="container-fluid">
+        <div class="row">-->
             <!--nav-->
-            <nav class="navbar navbar-inverse">
+            <!--<nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#">BETEZ Café</a>
@@ -56,64 +93,65 @@
                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ul>
                 </div>
-            </nav>
+            </nav>-->
             <!--end nav-->
-        </div>
-    </div>
+        <!--</div>
+    </div>-->
+
     <div class="container">
         <div class="row">
 
             <div class="col-md-8 col-md-offset-2">
-                <form role="form" method="POST" action="#">
-
+                <form role="form" method="POST" action="action.php">
                     <legend class="text-center">Đăng kí tài khoản</legend>
 
+                    <p class = 'reg-err' style="color:red;"></p>
                     <fieldset>
 
                         <div class="form-group col-md-6">
                             <label for="first_name">Họ</label>
-                            <input type="text" class="form-control" name="" id="first_name" placeholder="Họ">
+                            <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Họ">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="last_name">Tên</label>
                             <input type="text" class="form-control" name="last_name" id="" placeholder="Tên">
                         </div>
-
+<!--
                         <div class="form-group col-md-12">
                             <label for="Username"> Tên tài khoản </label>
                             <input type="text" class="form-control" name="user_name" id="" placeholder="Tên tài khoản">
-                        </div>
+                        </div>-->
 
                         <div class="form-group col-md-8">
                             <label for="">Email</label>
-                            <input type="email" class="form-control" name="" id="" placeholder="Email">
+                            <input type="email" class="form-control" name="email" id="" placeholder="Email">
                         </div>
 
                         <div class="form-group col-md-4">
                             <label for="">Số Điện Thoại</label>
-                            <input type="text" class="form-control" name="" id="" placeholder="Số ĐT">
-                        </div>
-
-                        <div class="form-group col-md-12">
-                            <label for="">Địa chỉ</label>
-                            <input type="text" class="form-control" name="" id="" placeholder="Địa chỉ">
+                            <input type="text" class="form-control" name="phone_number" id="" placeholder="Số ĐT">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="password">Mật khẩu</label>
-                            <input type="password" class="form-control" name="" id="password" placeholder="Mật khẩu">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Mật khẩu">
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="confirm_password">Xác nhận mật khẩu</label>
-                            <input type="password" class="form-control" name="" id="confirm_password" placeholder="Xác nhận mật khẩu">
+                            <input type="password" class="form-control" name="confirm_password" id="confirm_password" placeholder="Xác nhận mật khẩu">
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="">Địa chỉ</label>
+                            <input type="text" class="form-control" name="address" id="" placeholder="Địa chỉ">
                         </div>
 
 
                     </fieldset>
 
-                    <fieldset>
+                    <!--<fieldset>
 
                         <div class="form-group col-md-6">
                             <label for="country">Quốc tịch</label>
@@ -130,13 +168,13 @@
                             <textarea class="form-control" id="specify" name=""></textarea>
                         </div>
 
-                    </fieldset>
+                    </fieldset>-->
 
                     <div class="form-group">
                         <div class="col-md-12">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="" id="">
+                                    <input type="checkbox" value="checked" id="" name = 'accept'>
                                     Tôi đồng ý với tất cả <a href="#">các điều khoản</a>.
                                 </label>
                             </div>
@@ -145,7 +183,7 @@
 
                     <div class="form-group">
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn-success" id="button">
+                            <button type="submit" class="btn btn-success" name="button">
                                 Đăng kí
                             </button>
                         </div>
