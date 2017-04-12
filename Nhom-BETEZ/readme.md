@@ -1,7 +1,13 @@
 01/03/2017 - Nhóm BETEZ
+##### Thành viên nhóm: 
+1. Vũ Tuấn Thanh
+2. Nguyễn Năng Tùng
+3. Nguyễn Anh Đức
+4. Phạm Thái Quang
 
 Dự án: Xây dựng website kinh doanh đồ uống
 =====
+
 
 Nội dung
 -----
